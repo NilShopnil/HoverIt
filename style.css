@@ -1,0 +1,38 @@
+.container{
+    height: 650px;
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 300px;
+    background-image: url(fu.jpg);
+    background-position: center;
+    margin-bottom: 300px;
+    position: relative;
+    
+}
+.container::before{
+    content: '';
+    height: 650px;
+    width: 300px;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    background-color: green;
+    transition: 1.5s;
+}
+.container::after{
+    content: '';
+    position: absolute;
+    height: 650px;
+    width: 300px;
+    left: 50%;
+    top: 0;
+    background-color: red;
+    transition: 1.5s;
+}
+.container:hover::before{
+    right: 100%;
+}
+.container:hover::after{
+    left: 100%;
+}
